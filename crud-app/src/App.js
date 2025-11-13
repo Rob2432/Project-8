@@ -1,13 +1,13 @@
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import CreatePage from "./pages/CreatePage";
-import React, { useState } from "react";
 
-export default function App() {
+function App() {
   return (
     <Router>
-      <nav className="p-4 bg-blue-600 text-white flex justify-between">
-        <h1 className="font-bold">Startup Team Builder</h1>
-        <Link to="/create" className="hover:underline">Add Member</Link>
+      <nav style={{ padding: "1rem", background: "#2563eb", color: "white", display: "flex", justifyContent: "space-between" }}>
+        <h1>Startup Team Builder</h1>
+        <Link to="/create" style={{ color: "white", textDecoration: "underline" }}>Add Member</Link>
       </nav>
 
       <Routes>
@@ -17,4 +17,4 @@ export default function App() {
   );
 }
 
-
+export default App;
